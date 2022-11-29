@@ -25,11 +25,14 @@ import lombok.NoArgsConstructor;
 public class ProductoEntity implements Serializable {
     private static final long serialVersionUID=1L;
     
-       
     @Id
     @Column(name = "idproducto")
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private long idproducto;
+    
+    @ManyToOne
+    @JoinColumn(name = "idcategoria", nullable = false)
+    private CategoriaEntity idcategoria;
     
     @Column(name = "nombproducto")
     private String nombproducto;
@@ -51,9 +54,5 @@ public class ProductoEntity implements Serializable {
     
     @Column(name = "imagen")
     private String imagen;
-    
-        @ManyToOne
-    @JoinColumn(name = "idcategoria", nullable = false)
-    private CategoriaEntity idcategoria;
    
 }
