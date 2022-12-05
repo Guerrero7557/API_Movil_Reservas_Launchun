@@ -14,7 +14,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Builder  //Genera la clase
+@Builder  //Genera la clase 
 @AllArgsConstructor //constructor con parametros
 @NoArgsConstructor //constructor sin parametros
 @Data               //genera getters and setters
