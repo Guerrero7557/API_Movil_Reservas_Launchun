@@ -35,6 +35,13 @@ public class ProductoController {
     public Optional<ProductoEntity> findById(@PathVariable Long id){
         return productoService.findById(id);
     }
+    
+    //buscar por categoria
+    
+    @GetMapping("/cat/{xidcategoria}")
+    public List<ProductoEntity> finCategoriaProd(@PathVariable Long xidcategoria){
+        return productoService.finCategoriaProd(xidcategoria);
+    }
 
     @PostMapping
     public ProductoEntity add(@RequestBody ProductoEntity p){

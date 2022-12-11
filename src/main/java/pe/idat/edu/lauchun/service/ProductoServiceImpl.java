@@ -28,7 +28,8 @@ public class ProductoServiceImpl implements ProductoService{
     public Optional<ProductoEntity> findById(Long id) {
         return productoRepository.findById(id);
     }
-
+    
+    
     @Override
     public ProductoEntity add(ProductoEntity p) {
         return productoRepository.save(p);
@@ -47,4 +48,13 @@ public class ProductoServiceImpl implements ProductoService{
         objetoProducto.setEstado("Agotado");
         return productoRepository.save(objetoProducto);      
     }   
+
+    //buscar por categoria
+    @Override
+    public List<ProductoEntity> finCategoriaProd(Long xidcategoria) {
+        return productoRepository.finCategoriaProd(xidcategoria);
+    }
+    
+    
+    
 }

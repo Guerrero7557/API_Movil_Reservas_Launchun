@@ -11,6 +11,9 @@ public interface ProductoService {
     
     List<ProductoEntity> findAllCustom();
     
+    //buscar por categoria
+    List<ProductoEntity> finCategoriaProd(Long xidcategoria);
+    
     
     Optional<ProductoEntity> findById(Long id);
     
