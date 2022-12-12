@@ -35,6 +35,11 @@ public class ProductoEntity implements Serializable {
     @JoinColumn(name = "idcategoria", nullable = false)
     private CategoriaEntity idcategoria;
     */
+    
+    @Column(name = "idcategoria")
+    private int idcategoria;
+    
+    
     @Column(name = "nombproducto")
     private String nombproducto;
     

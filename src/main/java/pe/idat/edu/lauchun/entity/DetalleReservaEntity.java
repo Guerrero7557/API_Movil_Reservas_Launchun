@@ -52,4 +52,10 @@ public class DetalleReservaEntity implements Serializable{
     @JoinColumn(name="idproducto", nullable = false)
     private ProductoEntity idproducto;
     */
+    
+    @Column(name = "idreserva")
+    private int idreserva;
+    
+    @Column(name = "idproducto")
+    private int idproducto;
 }
