@@ -51,6 +51,7 @@ public class DetalleReservaEntity implements Serializable{
     @ManyToOne
     @JoinColumn(name="idproducto", nullable = false)
     private ProductoEntity idproducto;
+    xd
     */
     
     @Column(name = "idreserva")
