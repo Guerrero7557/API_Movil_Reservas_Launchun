@@ -30,10 +30,11 @@ public class ProductoEntity implements Serializable {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private long idproducto;
     
+    /*
     @ManyToOne
     @JoinColumn(name = "idcategoria", nullable = false)
     private CategoriaEntity idcategoria;
-    
+    */
     @Column(name = "nombproducto")
     private String nombproducto;
     

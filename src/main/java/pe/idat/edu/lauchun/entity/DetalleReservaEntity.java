@@ -43,6 +43,7 @@ public class DetalleReservaEntity implements Serializable{
     @Column(name = "marcaproducto")
     private String marcaproducto;    
     
+    /*
     @ManyToOne
     @JoinColumn(name="idreserva", nullable = false)
     private ReservaEntity idreserva;
@@ -50,5 +51,5 @@ public class DetalleReservaEntity implements Serializable{
     @ManyToOne
     @JoinColumn(name="idproducto", nullable = false)
     private ProductoEntity idproducto;
-    
+    */
 }
