@@ -22,5 +22,5 @@ public interface DetalleReservaService {
     DetalleReservaEntity update(DetalleReservaEntity d);
     
     //funcion para eliminar datos
-    //DetalleComprasEntity delete(DetalleComprasEntity d);
+    DetalleReservaEntity delete(DetalleReservaEntity d);
 }

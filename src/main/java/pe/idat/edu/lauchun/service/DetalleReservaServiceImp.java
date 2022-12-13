@@ -40,5 +40,14 @@ public class DetalleReservaServiceImp implements DetalleReservaService{
         BeanUtils.copyProperties(d, objdetreserva);
         return DetReservaServ.save(objdetreserva);
     }
+
+    @Override
+    public DetalleReservaEntity delete(DetalleReservaEntity d) {
+        DetalleReservaEntity objdetreserva = DetReservaServ.getById(d.getIddetalle());
+        objdetreserva.setEstado("Reservado");
+        return DetReservaServ.save(objdetreserva);
+    }
+
+    
     
 }

@@ -3,6 +3,7 @@ package pe.idat.edu.lauchun.controller;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,12 +26,12 @@ public class DetalleReservaController {
         return DetCompServ.findAll();
     }
     
-    /*
+    
     @GetMapping("custom")
     public List<DetalleReservaEntity>findAllCustom(){
         return DetCompServ.findAllCustom();
     }
-    */
+    
     
     @GetMapping("/{id}")
     public Optional<DetalleReservaEntity>findById(@PathVariable Long id ){
@@ -46,5 +47,12 @@ public class DetalleReservaController {
     public DetalleReservaEntity update(@PathVariable long id, @RequestBody DetalleReservaEntity d){
         d.setIddetalle(id);
         return DetCompServ.update(d);
+    }
+    
+    @DeleteMapping("/{id}")
+    public DetalleReservaEntity delete(@PathVariable long id) {
+        DetalleReservaEntity ObjetoProducto= new DetalleReservaEntity();
+        ObjetoProducto.setEstado("Reservado");
+        return DetCompServ.delete(DetalleReservaEntity.builder().iddetalle(id).build());
     }
 }

@@ -59,4 +59,11 @@ public class DetalleReservaEntity implements Serializable{
     
     @Column(name = "idproducto")
     private int idproducto;
+    
+    @Column(name = "imagen")
+    private String imagen; 
+    
+    @Column(name = "estado")
+    private String estado; 
+    
 }
