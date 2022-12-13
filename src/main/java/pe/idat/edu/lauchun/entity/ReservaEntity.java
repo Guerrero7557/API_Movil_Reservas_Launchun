@@ -29,10 +29,10 @@ public class ReservaEntity implements Serializable{
     private long idreserva;
     
     @Column(name="fechareserva")
-    private Date fechareserva;
+    private String fechareserva;
     
     @Column(name="fecharecojo")
-    private Date fecharecojo;
+    private String fecharecojo;
     
     @Column(name="estado")
     private boolean estado;
