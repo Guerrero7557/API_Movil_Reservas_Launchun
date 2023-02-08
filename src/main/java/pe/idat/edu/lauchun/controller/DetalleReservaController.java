@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pe.idat.edu.lauchun.entity.DetalleReservaEntity;
 import pe.idat.edu.lauchun.service.DetalleReservaService;
+//prueba 1
 
 
 @RestController
